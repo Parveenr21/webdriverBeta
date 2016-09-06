@@ -11,15 +11,206 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+
+	<build>			<!--This build tag is must..else we use to get errors like malformed tag 
+			unknown tag plugin -->
+		<plugins>
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+				<version>2.16</version> <configuration> <suiteXmlFiles> <suiteXmlFile>testNG.xml</suiteXmlFile> 
+				</suiteXmlFiles> <systemPropertyVariables> <propertyName>propertyValue</propertyName> 
+				<buildDirectory>${project.build.directory}</buildDirectory> </systemPropertyVariables> 
+				</configuration> </plugin> -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.17</version>
+				<configuration>
+
+					<!-- Passing variable to POM file -->
+					<systemPropertyVariables>
+						<browser>chrome</browser>
+						
+					</systemPropertyVariables>
+
+
+					
+
+					<suiteXmlFiles>
+						<!-- <suiteXmlFile>${file}</suiteXmlFile> -->
+						<suiteXmlFile>Latest.xml</suiteXmlFile>
+					</suiteXmlFiles>
+
+
+					<properties>
+
+						<property>
+							<name>usedefaultlisteners</name>
+							<value>false</value>
+						</property>
+						<property>
+							<name>listener</name>
+							<value>org.uncommons.reportng.HTMLReporter,
+								org.uncommons.reportng.JUnitXMLReporter</value>
+						</property>
+					</properties>
+					<workingDirectory>target/</workingDirectory>
+				</configuration>
+			</plugin>
+
+<!-- mentioninig below the java version for  compilation using maven compiler plugin for source files..e.g.here java1.8 -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+		<resources>
+      <resource>
+        <directory>src/main/resources</directory>
+                    <filtering>true</filtering>
+        
+      </resource>
+      </resources>
+	</build>
+
+
+
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.9</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.0.0-beta3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+
+
+		<!-- the below code gives hasinputkind of exception -->
+
+		<!-- <dependency> <groupId>com.github.detro.ghostdriver</groupId> <artifactId>phantomjsdriver</artifactId> 
+			<version>1.0.4</version> </dependency> -->
+
+
+
+		<!-- the below ..dependency is added as reportng gives some class not found 
+			error for inject module for testng 6+ -->
+
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>3.0</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.14</version>
+		</dependency>
+
+		<!-- We need to include the poi-ooxml jars to get the XSSF library. The 
+			poi jar only has the HSSF libraries. so that we can read .xlsx file too -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.13</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.3</version>
+		</dependency>
+<dependency>
+	<groupId>org.json</groupId>
+	<artifactId>json</artifactId>
+	<version>20151123</version>
+</dependency>
+
+<dependency>
+	<groupId>org.dbunit</groupId>
+	<artifactId>dbunit</artifactId>
+	<version>2.4.9</version>
+</dependency>
+
+
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-htmlunit-driver</artifactId>
+    <version>2.52.0</version>
+</dependency>
+
+	
+
+	</dependencies>
+
+
 </project>

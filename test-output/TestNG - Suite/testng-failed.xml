@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [TestNG - Suite]" parallel="tests" allow-return-values="true">
+  <parameter name="browser" value="ff"/>
+  <parameter name="param1" value="Parveen"/>
+  <test name="Default test(failed)" parallel="tests">
+    <classes>
+      <class name="com.rawatJi.SameOriginPolicy">
+        <methods>
+          <include name="tess1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.rawatJi.SameOriginPolicy -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [TestNG - Suite] -->

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestNG - Suite" duration-ms="242980" started-at="2016-09-06T08:24:04Z" finished-at="2016-09-06T08:28:07Z">
+    <groups>
+    </groups>
+    <test name="T1" duration-ms="34562" started-at="2016-09-06T08:24:04Z" finished-at="2016-09-06T08:24:39Z">
+      <class name="com.rawatJi.e5_SameOriginPolicy">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@13a5fe33]" name="setup" is-config="true" duration-ms="12" started-at="2016-09-06T13:54:04Z" finished-at="2016-09-06T13:54:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tess1()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@13a5fe33]" name="tess1" duration-ms="34405" started-at="2016-09-06T13:54:04Z" finished-at="2016-09-06T13:54:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tess1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@13a5fe33]" name="teardown" is-config="true" duration-ms="136" started-at="2016-09-06T13:54:39Z" finished-at="2016-09-06T13:54:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.rawatJi.e5_SameOriginPolicy -->
+    </test> <!-- T1 -->
+    <test name="T3" duration-ms="10470" started-at="2016-09-06T08:24:39Z" finished-at="2016-09-06T08:24:49Z">
+      <class name="com.rawatJi.e5_SameOriginPolicy">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@7791a895]" name="setup" is-config="true" duration-ms="0" started-at="2016-09-06T13:54:39Z" finished-at="2016-09-06T13:54:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="tess1()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@7791a895]" name="tess1" duration-ms="10334" started-at="2016-09-06T13:54:39Z" finished-at="2016-09-06T13:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tess1 -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@7791a895]" name="teardown" is-config="true" duration-ms="134" started-at="2016-09-06T13:54:49Z" finished-at="2016-09-06T13:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.rawatJi.e5_SameOriginPolicy -->
+    </test> <!-- T3 -->
+    <test name="T4" duration-ms="197934" started-at="2016-09-06T08:24:49Z" finished-at="2016-09-06T08:28:07Z">
+      <class name="com.rawatJi.e5_SameOriginPolicy">
+        <test-method status="PASS" signature="tess1()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@4f970963]" name="tess1" duration-ms="197814" started-at="2016-09-06T13:54:49Z" finished-at="2016-09-06T13:58:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tess1 -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@4f970963]" name="setup" is-config="true" duration-ms="0" started-at="2016-09-06T13:54:49Z" finished-at="2016-09-06T13:54:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.rawatJi.e5_SameOriginPolicy@4f970963]" name="teardown" is-config="true" duration-ms="118" started-at="2016-09-06T13:58:07Z" finished-at="2016-09-06T13:58:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.rawatJi.e5_SameOriginPolicy -->
+    </test> <!-- T4 -->
+  </suite> <!-- TestNG - Suite -->
+</testng-results>
