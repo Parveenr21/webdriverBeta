@@ -24,7 +24,7 @@ import org.testng.annotations.Test;
 
 import site1.Matrimony;
 
-public class d1_MatrimonyTest {
+public class d1_MatrimonyTest_GRID {
 
 	WebDriver firefoxdriverLOCAL ;
 	RemoteWebDriver firefoxdriverREMOTE;
@@ -140,8 +140,8 @@ public  RemoteWebDriver  getFirefoxDriverREMOTEInstance() throws MalformedURLExc
 	cap.setBrowserName("firefox");
 	cap.setCapability("marionette", true);
 	System.setProperty("webdriver.gecko.driver","/Users/parawat/Downloads/geckodriver");
-	cap.setPlatform(Platform.WINDOWS);
-	
+	//cap.setPlatform(Platform.WINDOWS);
+	cap.setPlatform(Platform.LINUX);
 	/*
 	 * InvocationTargetException is thrown when 
 	 * Error forwarding a new session can not find capabilities when set wrong capabilties.
