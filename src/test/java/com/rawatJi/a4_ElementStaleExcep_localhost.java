@@ -23,19 +23,17 @@ public class a4_ElementStaleExcep_localhost {
 
 	//uncommenting cache lookup will get u elementstale exception for 4th line.
 	
-	//@CacheLookup  
-	
-	
+	@CacheLookup  
 	 @FindBy(how = How.XPATH, using = "//a[contains(.,'Parallelizing Your Test Runs')]")
 	  public WebElement we2;
 	 
 	 
-	/* public ElementStaleExcep_localhost(WebDriver driver){
-			
-			this.driver=driver;
-			
-		}
-	 */
+//	 public a4_ElementStaleExcep_localhost(WebDriver driver){
+//			
+//			this.driver=driver;
+//			
+//		}
+	 
 	
 	@Test
 	public void Tempp1()
@@ -46,10 +44,7 @@ public class a4_ElementStaleExcep_localhost {
 		
 		
 		System.setProperty("webdriver.chrome.driver" ,  "/Users/parawat/Downloads/chromedriver");
-		
 		driver= new ChromeDriver();
-		
-		//driver.get("http://localhost:8080");
 		driver.get("http://www.seleniumhq.org/docs/04_webdriver_advanced.jsp");
 		
 		
@@ -68,9 +63,6 @@ public class a4_ElementStaleExcep_localhost {
 		 */
 		
 		WebElement we1=driver.findElement(By.xpath("//a[contains(.,'Parallelizing Your Test Runs')]"));
-		
-		
-		
 		System.out.println("1  "   + we1.getText());
 		
 		/*driver.navigate().refresh();
@@ -84,10 +76,7 @@ public class a4_ElementStaleExcep_localhost {
 		//LEARNING 1
 		
 		//System.out.println(driver.findElement(By.tagName("body")).getText());
-		
-		
 		//There is find element and elements with respect to webelement tooo.. but that looks the relative path within the parent xpath...so use carefuly
-		
 		//System.out.println(we1.findElement(By.tagName("body")).getText());  //this will throw exception as body tag is much above
 		
 		
@@ -108,12 +97,8 @@ public class a4_ElementStaleExcep_localhost {
 		
 		a4_ElementStaleExcep_localhost obj=PageFactory.initElements(driver, a4_ElementStaleExcep_localhost.class);
 		
-		
 		//ElementLocatorFactory ef=new AjaxElementLocatorFactory(driver, 50);
-		
-		
 		//Still need to learn proper use of AELF
-		
 		//The below statement set timeout for object for its visiblity here for 50 seconds..
 		
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 50), a4_ElementStaleExcep_localhost.class);

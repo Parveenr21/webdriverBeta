@@ -48,7 +48,6 @@ public class A5_FbFriendList {
 			
 
 			DesiredCapabilities cap = DesiredCapabilities.firefox();
-			cap.setCapability("marionette", true);
 			System.setProperty("webdriver.gecko.driver","/Users/parawat/Downloads/geckodriver");
 			cap.setCapability("firefox_binary", "/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox-bin");
 
@@ -60,7 +59,7 @@ public class A5_FbFriendList {
 		
 			driver.get("https://www.facebook.com/");
 
-			driver.findElement(By.xpath("//input[@id='email']")).sendKeys("p18101984@gmail.com");
+			driver.findElement(By.xpath("//input[@id='email']")).sendKeys("parveen.techno@gmail.com");
 			driver.findElement(By.xpath("//input[@id='pass']")).sendKeys("stvcmnpcnmocratfoene");
 
 			driver.findElement(By.xpath("//*[@type='submit']")).click();;
@@ -70,7 +69,7 @@ public class A5_FbFriendList {
 
 			//Logged in now.. clicking on loggedin User's profile or Timeline
 			driver.findElement(By.xpath("//a[contains(@data-gt,'timeline')]")).click();
-
+			//driver.findElement(By.xpath("//a[contains(@data-gt,'timeline')]")).click();
 
 			Thread.sleep(2000);
 

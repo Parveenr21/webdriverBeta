@@ -22,7 +22,7 @@ public class a1_W3_element_nullify_onceDOMchanges {
 		
 		
 		cap = DesiredCapabilities.firefox();
-		cap.setCapability("marionette", true);	//RUN by keeping it true only
+		//cap.setCapability("marionette", false);	//DEFAULT is true and marionette needs it true.
 		System.setProperty("webdriver.gecko.driver","/Users/parawat/Downloads/geckodriver");
 		cap.setCapability("firefox_binary", "/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox-bin");
 
@@ -35,15 +35,19 @@ public class a1_W3_element_nullify_onceDOMchanges {
 	
 	
 	@Test
-	public void testMethod1()
+	public void testMethod1() throws InterruptedException
 	{
 		
-		
+		try{
 		driver=new FirefoxDriver(cap);
 		
 		driver.get("http://www.w3schools.com/");
 		
-		WebElement we=driver.findElement(By.xpath("//div/a[4]"));
+		Thread.sleep(5000);
+		
+		//use RELEATIVE xpath helper in chrome and chrompath to validate
+		
+		WebElement we=driver.findElement(By.xpath("//A[@href='/html/default.asp']"));
 		
 
 		System.out.println("###" +we.getTagName() );
@@ -69,7 +73,14 @@ public class a1_W3_element_nullify_onceDOMchanges {
 		
 		System.out.println("###" + 		we.getText() );
 		
-
+		}
+		finally{
+			if(driver!=null)
+			driver.quit();
+			
+			
+		}
+		
 		
 		
 	}

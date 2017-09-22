@@ -21,7 +21,6 @@ public class a3_DoubleClick {
 	{
 
 		DesiredCapabilities cap= DesiredCapabilities.firefox();
-		cap.setCapability("marionette", true);	//RUN by keeping it true only
 		cap.setCapability("firefox_binary", "/Applications/FirefoxDeveloperEdition.app/Contents/MacOS/firefox-bin");
 		System.setProperty("webdriver.gecko.driver","/Users/parawat/Downloads/geckodriver");
 
@@ -39,10 +38,10 @@ public class a3_DoubleClick {
 		Actions action = new Actions(driver);
 
 		//Double click statement written there
-		//action.doubleClick(driver.findElement(By.xpath("//*[@id='gbqfba']"))).perform();
+		action.doubleClick(driver.findElement(By.xpath("//*[@id='gbqfba']"))).perform();
 
 
-		//WebElement a= driver.findElement(By.linkText("dd"));
+		WebElement a= driver.findElement(By.linkText("dd"));
 
 
 	}
